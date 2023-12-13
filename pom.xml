@@ -80,6 +80,15 @@
       <artifactId>commons-lang3</artifactId>
       <version>3.13.0</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.evosuite/evosuite-standalone-runtime -->
+    <dependency>
+      <groupId>org.evosuite</groupId>
+      <artifactId>evosuite-standalone-runtime</artifactId>
+      <version>1.0.6</version>
+      <scope>test</scope>
+    </dependency>
+
     <!-- testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
