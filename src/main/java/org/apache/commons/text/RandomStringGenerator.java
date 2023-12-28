@@ -26,6 +26,7 @@ import java.util.concurrent.ThreadLocalRandom;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
+import java.security.SecureRandom;
 
 /**
  * Generates random Unicode strings containing the specified number of code points.
@@ -458,7 +459,10 @@ public final class RandomStringGenerator {
         if (random != null) {
             return random.nextInt(maxInclusive - minInclusive + 1) + minInclusive;
         }
-        return ThreadLocalRandom.current().nextInt(minInclusive, maxInclusive + 1);
+        //return ThreadLocalRandom.current().nextInt(minInclusive, maxInclusive + 1);
+        SecureRandom secureRandom = new SecureRandom();
+        return secureRandom.nextInt(maxInclusive +1 - minInclusive) + minInclusive;
+
     }
 
     /**
